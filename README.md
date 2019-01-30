@@ -91,15 +91,19 @@ When using the scheduler, you only need to add the following Cron entry to your 
 ```* * * * * cd /path-to-your-project && php bakery schedule >> /dev/null 2>&1```
 <br>This cron will call the scheduler every minute. When the `schedule` command is executed, the scheduler will evaluate your scheduled tasks and runs the functions that are due.
 
-## Available pages 
-in the interface there are several pages which can be used to manage the tasks.
-### Dashboard `route: /schedules`
-gives you an overview of the overall settings as well as the next schedules and last activities
-### Schedules list `route: /schedules/list`
-allow search/filtering for specific schedules. you have direct links to both schedules and functions.
-this is also the place to start, stop, delete or add new schedules
-### Functions list `route: /schedules/functions`
-allow to search for single functions with direct link to function details
+## Features 
+![Dashboard](screenshots/dashboard.jpg)
+
+![Schedules list](screenshots/schedules-list.jpg)
+
+![Schedules details](screenshots/schedules-details.jpg)
+
+![schedules functions](screenshots/schedules-functions.jpg)
+
+![Schedules function details](screenshots/schedules-functions-details.jpg)
+
+## Routes
+...
 
 # Permission management
 There is just a simple permission management which contains the main roles on a high level. 
