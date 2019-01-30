@@ -102,6 +102,55 @@ this is also the place to start, stop, delete or add new schedules
 allow to search for single functions with direct link to function details
 
 # Permission management
+There is just a simple permission management which contains the main roles on a high level. 
+since it is not the idea that every user can manage those schedules, there is no need to have more permissions.
+## overview
+this table should give a short overview of permission slugs and what users can do. the description of the single 
+<table>
+    <tr>
+        <th align="left">slug</th>
+        <th>view</th>
+        <th>create/modify</th>
+        <th>view hidden</th>
+        <th>modify hidden</th>
+    </tr>
+    <tr>
+        <td>see_schedules</td>
+        <td align="center">X</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>edit_schedules</td>
+        <td align="center">X</td>
+        <td align="center">X</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>see_schedules_hidden</td>
+        <td align="center">X</td>
+        <td></td>
+        <td align="center">X</td>
+        <td></td>
+    </tr>
+</table>
+
+## slug `see_schedules`
+User with this permission can see everything what is available for public within the scheduler. 
+They can not see the hidden schedules and they can not modify or create any schedules.
+Use this permission if you want to show a user the scheduling without allowing any modifications
+
+## slug `edit_schedules`
+This permission allows to modify the public schedules (including delete) as well as creating new schedules.
+Give this permission to users who understand what the functions are doing and how they can customize the functions.
+
+## slug `see_schedules_hidden`
+Based on the idea from [Louis Charette](https://github.com/lcharette) there is an option to add schedules which can not be edited in any way.
+that means they are implemented by migration and can only be started/stopped on the command line.
+But since there is a nice interface, why not show any information about those hidden jobs? 
+Use this permission for admins who need to keep an eye on the hidden schedules
 
 # Advanced usage
 
@@ -109,10 +158,13 @@ allow to search for single functions with direct link to function details
 
 ## add own scheduling functions
 
-### setup new function class
+## hidden schedules
 
-### setup migration
+## setup new function class
 
+## setup migration
+
+## use scheduler on command line
 
 # Running tests
 
