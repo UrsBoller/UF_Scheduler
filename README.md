@@ -11,7 +11,7 @@ The main idea is that you can manage all schedules in the admin interface of use
 [4. Run your schedules](#run-schedules)<br>
 [5. Permission management](#permissions)<br>
 [6. Advanced usage](#advanced)<br>
-</ol>
+[7. Running tests](#tests)<br>
 <!-- /toc -->
 
 <a name="important"></a>
@@ -201,20 +201,28 @@ Use this permission for admins who need to keep an eye on the hidden schedules
 
 <a name="advanced"></a>
 # 6. Advanced usage
+..
 
 ## how the scheduler works
+..
 
 ## add own scheduling functions
+..
 
 ## hidden schedules
+..
 
 ## setup new function class
+..
 
 ## setup migration
+..
 
 ## use scheduler on command line
+..
 
-# Running tests
+<a name="tests"></a>
+# 7. Running tests
 
 currently there are no built in tests for this sprinkle. you use it at your own risks so please do a propper testing yourself!
 
