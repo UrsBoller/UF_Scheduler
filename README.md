@@ -3,7 +3,20 @@ This Sprinkle provides a framework to add schedule functions to UserFrosting sim
 But instead of adding each function to CRON, you simply setup one CRON job which triggers the script. 
 The main idea is that you can manage all schedules in the admin interface of userfrosting.
 
-# Important: BETA version - initial work in progress
+## Table of Contents
+<!-- toc -->
+<ol>
+    <li>[Important information](#important)</li>
+    <li>[The scheduler - first insights](#scheduler-insights)</li>
+    <li>[Installation](#installation)</li>
+    <li>[Run your schedules](#)</li>
+    <li>[Permission management](#permissions)</li>
+    <li>[Advanced usage](#advanced)</li>
+</ol>
+<!-- /toc -->
+
+<a name="headers"></a>
+# 1. Important: BETA version - initial work in progress
 the current code is still beta and might change without managing any migration or dependencies.
 that means if you use this sprinkle you do it at your own risk!
 (be sure I will try to keep it as stable as possible but can't guarantee...)
@@ -34,7 +47,34 @@ for larger projects it might be better to have a scheduling based on timezones w
 
 If you find any bug, feel free to open an issue or better submit a pull request. 
 
-# Installation
+<a name="scheduler-insights"></a>
+# 2. The scheduler
+Before we dig into the single settings and functions from the scheduler a short description how the scheduler works.
+
+## The idea
+While cron jobs are available on most systems it is hard to manage them since you would need to have console access to get it up and running.
+Therefore the idea came up to use something similar to [Task Scheduling - Laravel](https://laravel.com/docs/5.7/scheduling) but with a nice backend interface.
+It would be perfect if all users with permission can manage single tasks.<p>
+Thanks to the UserFrosting Team which gave me some help the scheduler uses the bakery command which allows to work within sprinkles. 
+beeing in the framework allows to use all the features that are available in the application anyway, its just a simple sprinkle really similar what you would find somewhere else.
+
+## Features 
+![Dashboard](screenshots/dashboard.jpg)
+
+![Schedules list](screenshots/schedules-list.jpg)
+
+![Schedules details](screenshots/schedules-details.jpg)
+
+![schedules functions](screenshots/schedules-functions.jpg)
+
+![Schedules function details](screenshots/schedules-functions-details.jpg)
+
+## Routes
+...
+
+
+<a name="installation"></a>
+# 3. Installation
 
 Following some information to get the scheduler up and running<p>
 
@@ -49,7 +89,7 @@ because of the dependencies there are some requirements to be aware of before yo
 - PHP 7.0+ required for [dragonmantank/cron-expression](https://github.com/dragonmantank/cron-expression)
 - UserFrosting 4.1.x for [lcharette/UF_FormGenerator](https://github.com/lcharette/UF_FormGenerator) 
 
-# Installation
+## Add to your side
 Edit UserFrosting `app/sprinkles.json` file and add the following to the `require` list : 
 
 - `"lcharette/uf_formgenerator": "^2.0.0"`. Also add `FormGenerator` to the `base` list. 
@@ -75,37 +115,37 @@ For example:
 
 Run `composer update` then `php bakery bake` to install the sprinkle.
 
-# The scheduler
-Before we dig into the single settings and functions from the scheduler a short description how the scheduler works.
+<a name="run-schedules"></a>
+# 4. Run your schedules
+...
 
-## The idea
-While cron jobs are available on most systems it is hard to manage them since you would need to have console access to get it up and running.
-Therefore the idea came up to use something similar to [Task Scheduling - Laravel](https://laravel.com/docs/5.7/scheduling) but with a nice backend interface.
-It would be perfect if all users with permission can manage single tasks.<p>
-Thanks to the UserFrosting Team which gave me some help the scheduler uses the bakery command which allows to work within sprinkles. 
-beeing in the framework allows to use all the features that are available in the application anyway, its just a simple sprinkle really similar what you would find somewhere else.
-
-## Starting the cron schedule
+## Start CRON job
 When using the scheduler, you only need to add the following Cron entry to your server. If you do not know how to add Cron entries to your server, consider using a service such as Laravel Forge which can manage the Cron entries for you:
 
 ```* * * * * cd /path-to-your-project && php bakery schedule >> /dev/null 2>&1```
 <br>This cron will call the scheduler every minute. When the `schedule` command is executed, the scheduler will evaluate your scheduled tasks and runs the functions that are due.
 
-## Features 
-![Dashboard](screenshots/dashboard.jpg)
-
-![Schedules list](screenshots/schedules-list.jpg)
-
-![Schedules details](screenshots/schedules-details.jpg)
-
-![schedules functions](screenshots/schedules-functions.jpg)
-
-![Schedules function details](screenshots/schedules-functions-details.jpg)
-
-## Routes
+## Managing your schedules
 ...
 
-# Permission management
+### Add a schedule
+...
+
+### Modify a schedule
+...
+
+### Start/Stop schedules
+...
+
+### Delete schedules
+...
+
+## Troubleshooting
+...
+
+
+<a name="permissions"></a>
+# 5. Permission management
 There is just a simple permission management which contains the main roles on a high level. 
 since it is not the idea that every user can manage those schedules, there is no need to have more permissions.
 ## overview
@@ -160,7 +200,8 @@ that means they are implemented by migration and can only be started/stopped on 
 But since there is a nice interface, why not show any information about those hidden jobs? 
 Use this permission for admins who need to keep an eye on the hidden schedules
 
-# Advanced usage
+<a name="advaced"></a>
+# 6. Advanced usage
 
 ## how the scheduler works
 
