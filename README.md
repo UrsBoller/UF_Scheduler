@@ -112,17 +112,15 @@ since it is not the idea that every user can manage those schedules, there is no
 this table should give a short overview of permission slugs and what users can do. the description of the single 
 <table>
     <tr>
-        <th align="left">slug</th>
-        <th colspan="2">public schedules</th>
-        <th>modify public</th>
-        <th>modify hidden</th>
+        <th rowspan="2" align="left">slug</th>
+        <th colspan="2">'PUBLIC' schedules</th>
+        <th colspan="2">'HIDDEN' schedules</th>
     </tr>
     <tr>
-        <th align="left">slug</th>
         <th>view</th>
-        <th>view hidden</th>
-        <th>modify public</th>
-        <th>modify hidden</th>
+        <th>modify</th>
+        <th>view</th>
+        <th>modify</th>
     </tr>
     <tr>
         <td>see_schedules</td>
@@ -132,14 +130,14 @@ this table should give a short overview of permission slugs and what users can d
         <td></td>
     </tr>
     <tr>
-        <td>see_schedules_hidden</td>
+        <td>edit_schedules</td>
         <td></td>
         <td align="center">X</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>edit_schedules</td>
+        <td>see_schedules_hidden</td>
         <td></td>
         <td></td>
         <td align="center">X</td>
