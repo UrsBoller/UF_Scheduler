@@ -5,17 +5,16 @@ The main idea is that you can manage all schedules in the admin interface of use
 
 ## Table of Contents
 <!-- toc -->
-<ol>
-    <li>[Important information](#important)</li>
-    <li>[The scheduler - first insights](#scheduler-insights)</li>
-    <li>[Installation](#installation)</li>
-    <li>[Run your schedules](#)</li>
-    <li>[Permission management](#permissions)</li>
-    <li>[Advanced usage](#advanced)</li>
+[1. Important information](#important)<br>
+[2. The scheduler - first insights](#scheduler-insights)<br>
+[3. Installation](#installation)<br>
+[4. Run your schedules](#run-schedules)<br>
+[5. Permission management](#permissions)<br>
+[6. Advanced usage](#advanced)<br>
 </ol>
 <!-- /toc -->
 
-<a name="headers"></a>
+<a name="important"></a>
 # 1. Important: BETA version - initial work in progress
 the current code is still beta and might change without managing any migration or dependencies.
 that means if you use this sprinkle you do it at your own risk!
