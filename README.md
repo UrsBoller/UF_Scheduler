@@ -199,7 +199,7 @@ that means they are implemented by migration and can only be started/stopped on 
 But since there is a nice interface, why not show any information about those hidden jobs? 
 Use this permission for admins who need to keep an eye on the hidden schedules
 
-<a name="advaced"></a>
+<a name="advanced"></a>
 # 6. Advanced usage
 
 ## how the scheduler works
