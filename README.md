@@ -113,9 +113,15 @@ this table should give a short overview of permission slugs and what users can d
 <table>
     <tr>
         <th align="left">slug</th>
+        <th colspan="2">public schedules</th>
+        <th>modify public</th>
+        <th>modify hidden</th>
+    </tr>
+    <tr>
+        <th align="left">slug</th>
         <th>view</th>
-        <th>create/modify</th>
         <th>view hidden</th>
+        <th>modify public</th>
         <th>modify hidden</th>
     </tr>
     <tr>
@@ -126,15 +132,15 @@ this table should give a short overview of permission slugs and what users can d
         <td></td>
     </tr>
     <tr>
-        <td>edit_schedules</td>
-        <td align="center">X</td>
+        <td>see_schedules_hidden</td>
+        <td></td>
         <td align="center">X</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>see_schedules_hidden</td>
-        <td align="center">X</td>
+        <td>edit_schedules</td>
+        <td></td>
         <td></td>
         <td align="center">X</td>
         <td></td>
